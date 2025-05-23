@@ -1,0 +1,145 @@
+.currencySelector {
+  position: relative;
+  display: inline-block;
+}
+
+.currencyButton {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  transition: background-color 0.2s;
+}
+
+.currencyButton:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.currencyDropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 240px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  z-index: 1000;
+  margin-top: 4px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.currencySearch {
+  padding: 12px;
+  border-bottom: 1px solid #e2e8f0;
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 1;
+  border-radius: 8px 8px 0 0;
+}
+
+.currencySearch input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.currencySearch input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.currencyOption {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.currencyOption:hover {
+  background-color: #f8f9fa;
+}
+
+.currencyOption.selected {
+  background-color: #ebf5ff;
+  color: #2563eb;
+}
+
+.currencyFlag {
+  font-size: 20px;
+  width: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.currencyCode {
+  font-weight: 500;
+  min-width: 45px;
+  color: #1f2937;
+}
+
+.currencySymbol {
+  color: #6b7280;
+  font-size: 13px;
+  margin-left: auto;
+}
+
+.currencyName {
+  color: #6b7280;
+  font-size: 13px;
+}
+
+/* Scrollbar styling */
+.currencyDropdown::-webkit-scrollbar {
+  width: 6px;
+}
+
+.currencyDropdown::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.currencyDropdown::-webkit-scrollbar-thumb {
+  background: #c5c5c5;
+  border-radius: 3px;
+}
+
+.currencyDropdown::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+@media (max-width: 768px) {
+  .currencyDropdown {
+    width: 200px;
+    right: -10px;
+  }
+
+  .currencyName {
+    font-size: 12px;
+  }
+
+  .currencySymbol {
+    font-size: 12px;
+  }
+}
+
+.currencyItem .flag {
+  font-family: "Segoe UI Emoji", "Apple Color Emoji", "Segoe UI Symbol", "Noto Color Emoji", "Android Emoji", sans-serif;
+  font-size: 1.2em;
+  margin-right: 8px;
+  display: inline-block;
+  vertical-align: middle;
+}

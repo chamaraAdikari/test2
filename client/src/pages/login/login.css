@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+/* RESET + BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+/* BACKGROUND + CENTERING */
+body {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: white !important;
+}
+
+/* LOGIN CONTAINER */
+.login {
+  width: 100% !important;
+  min-width: 600px !important;
+  display: flex;
+  justify-content: center !important;
+  padding: 20px !important;
+  margin: 0 auto !important;
+}
+
+.lContainer {
+  background: #fff !important;
+  padding: 20px 15px !important;
+  width: 100% !important;
+  max-width: 430px !important;  /* Increased from 430px to 600px */
+  min-width: 430px !important;  /* Added minimum width */
+  border-radius: 6px !important;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2) !important;
+  max-height: 90vh !important;
+  overflow-y: auto !important;
+}
+
+/* HEADER */
+.lContainer h3 {
+  position: relative !important;
+  font-size: 22px !important;
+  font-weight: 600 !important;
+  color: #333 !important;
+  text-align: center !important;
+  margin-bottom: 25px !important;
+}
+
+.lContainer h3::before {
+  content: '' !important;
+  position: absolute !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  bottom: -6px !important;
+  height: 3px !important;
+  width: 28px !important;
+  border-radius: 12px !important;
+  background: #4070f4 !important;
+}
+
+/* FORM FIELDS */
+.inputGroup {
+  margin-bottom: 15px !important;
+}
+
+.lInput {
+  height: 52px !important;
+  width: 100% !important;
+  padding: 0 15px;
+  font-size: 16px;
+  color: #333;
+  border: 1.5px solid #C7BEBE;
+  border-bottom-width: 2.5px;
+  border-radius: 6px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.lInput:focus,
+.lInput:valid {
+  border-color: #4070f4;
+}
+
+/* ERROR MESSAGE */
+.error-message {
+  color: red;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* SUBMIT BUTTON */
+.lButton {
+  width: 100%;
+  height: 52px;
+  background: #4070f4;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: background 0.3s ease;
+}
+
+.lButton:hover {
+  background: #0e4bf1;
+}
+
+.lButton:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}
+
+/* SIGNUP LINK */
+.signup-link {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #333;
+  text-align: center;
+}
+
+.signup-link a {
+  color: #4070f4;
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}
+
+/* MOBILE FRIENDLY */
+@media screen and (max-width: 640px) {
+  .login {
+    min-width: 100% !important;
+    padding: 15px !important;
+  }
+
+  .lContainer {
+    padding: 18px 15px !important;
+    min-width: unset !important;
+    width: 100% !important;
+  }
+
+  .lContainer h3 {
+    font-size: 20px;
+  }
+
+  .lButton {
+    font-size: 15px;
+  }
+}
+

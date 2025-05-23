@@ -1,0 +1,112 @@
+.datatable {
+  height: auto;
+  padding: 20px;
+  
+  .datatableTitle{
+    width: 100%;
+    font-size: 24px;
+    color: gray;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .actionSection {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+
+      .searchInput {
+        width: 300px;
+        margin-right: 10px;
+
+        .MuiOutlinedInput-root {
+          border-radius: 5px;
+          background-color: #fff;
+        }
+      }
+    }
+
+    .link{
+      text-decoration: none;
+      color: green;
+      font-size: 16px;
+      font-weight: 400;
+      border: 1px solid green;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: green;
+        color: white;
+      }
+    }
+  }
+
+  .cellWithImg {
+    display: flex;
+    align-items: center;
+
+    .cellImg {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 20px;
+    }
+  }
+
+  .cellWithStatus {
+    padding: 5px;
+    border-radius: 5px;
+
+    &.active {
+      background-color: rgba(0, 128, 0, 0.05);
+      color: green;
+    }
+    &.pending {
+      background-color: rgba(255, 217, 0, 0.05);
+      color: goldenrod;
+    }
+    &.passive {
+      background-color: rgba(255, 0, 0, 0.05);
+      color: crimson;
+    }
+  }
+
+  .cellAction {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    .viewButton {
+      padding: 5px 10px;
+      border-radius: 5px;
+      color: #2196f3;
+      border: 1px solid #2196f3;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: #2196f3;
+        color: white;
+      }
+    }
+    
+    .deleteButton {
+      padding: 5px 10px;
+      border-radius: 5px;
+      color: #f44336;
+      border: 1px solid #f44336;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: #f44336;
+        color: white;
+      }
+    }
+  }
+}

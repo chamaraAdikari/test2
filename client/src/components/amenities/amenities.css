@@ -1,0 +1,90 @@
+.amenitiesContainer {
+    width: 100%;
+    height: 100%;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+}
+
+.amenitiesTitle {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: #1a2b3c;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.amenitiesList {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.amenityItem {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 16px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+}
+
+.amenityItem:hover {
+    background-color: #f1f5f9;
+    border-color: #e2e8f0;
+    transform: translateX(5px);
+}
+
+.amenityIcon {
+    font-size: 22px;
+    min-width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.amenityName {
+    font-size: 14px;
+    color: #334155;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .amenitiesContainer {
+        margin: 0;
+        padding: 15px;
+        background-color: #fff;
+    }
+    
+    .amenitiesList {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .amenityItem {
+        padding: 8px;
+    }
+
+    .amenityItem:hover {
+        transform: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .amenitiesList {
+        grid-template-columns: 1fr;
+    }
+
+    .amenitiesTitle {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+}

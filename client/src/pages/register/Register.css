@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+/* RESET + BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+
+/* BACKGROUND + CENTERING */
+body {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: white !important;
+}
+
+/* REGISTER CONTAINER */
+.register {
+  width: 100% !important;
+  display: flex;
+  justify-content: center !important;
+  padding: 20px !important;
+}
+
+.rContainer {
+  background: #fff !important;
+  padding: 20px 15px !important;
+  width: 100% !important;
+  max-width: 430px !important;
+  border-radius: 6px !important;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2) !important;
+  max-height: 90vh !important;
+  overflow-y: auto !important;
+}
+
+/* HEADER */
+.rContainer h3 {
+  position: relative !important;
+  font-size: 22px !important;
+  font-weight: 600 !important;
+  color: #333 !important;
+  text-align: center !important;
+  margin-bottom: 25px !important;
+}
+
+.rContainer h3::before {
+  content: '' !important;
+  position: absolute !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  bottom: -6px !important;
+  height: 3px !important;
+  width: 28px !important;
+  border-radius: 12px !important;
+  background: #4070f4 !important;
+}
+
+/* FORM STYLES */
+form {
+  margin-top: 20px !important;
+}
+
+.formGroup {
+  margin-bottom: 15px !important;
+}
+
+.formGroup label {
+  display: block !important;
+  font-size: 14px !important;
+  margin-bottom: 6px !important;
+  color: #333 !important;
+  font-weight: 500 !important;
+}
+
+.formGroup input {
+  height: 52px !important;
+  width: 100% !important;
+  padding: 0 15px;
+  font-size: 16px;
+  color: #333;
+  border: 1.5px solid #C7BEBE;
+  border-bottom-width: 2.5px;
+  border-radius: 6px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.formGroup input:focus,
+.formGroup input:valid {
+  border-color: #4070f4;
+}
+
+/* PASSWORD TOGGLE */
+.password-input-wrapper {
+  position: relative;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: #666;
+  cursor: pointer;
+}
+
+/* DROPDOWNS */
+.country-select {
+  margin-bottom: 20px;
+}
+
+/* ERROR MESSAGE */
+.error-message {
+  color: red;
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* SUBMIT BUTTON */
+.submit-button {
+  width: 100%;
+  height: 52px;
+  background: #4070f4;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: background 0.3s ease;
+}
+
+.submit-button:hover {
+  background: #0e4bf1;
+}
+
+.submit-button:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}
+
+/* LOGIN LINK */
+.login-link {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #333;
+  text-align: center;
+}
+
+.login-link a {
+  color: #4070f4;
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+/* MOBILE FRIENDLY */
+@media screen and (max-width: 480px) {
+  .rContainer {
+    padding: 18px 15px !important; /* tighter on small screens */
+  }
+
+  .rContainer h3 {
+    font-size: 20px;
+  }
+
+  .submit-button {
+    font-size: 15px;
+  }
+}
