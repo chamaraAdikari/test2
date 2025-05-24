@@ -150,15 +150,34 @@ export const getHotelRooms = async (req, res, next) => {
   }
 };
 
-// Cleanup function for expired hotels (backup for TTL index)
+// Cleanup function for expired hotels (safe against invalid dates)
 export const cleanupExpiredHotels = async () => {
     try {
-        const currentTime = new Date();
-        const result = await Hotel.deleteMany({
-            expiresAt: { $lte: currentTime }
-        });
-        console.log(`Cleaned up ${result.deletedCount} expired hotels`);
+      const currentTime = new Date();
+  
+      // Log bad data before deletion
+      const allHotels = await Hotel.find({});
+      let badCount = 0;
+  
+      allHotels.forEach((hotel) => {
+        if (!hotel.expiresAt || isNaN(new Date(hotel.expiresAt))) {
+          console.error("🚨 Hotel with invalid expiresAt:", hotel._id, hotel.expiresAt);
+          badCount++;
+        }
+      });
+  
+      if (badCount > 0) {
+        console.warn(`⚠️ Found ${badCount} hotels with invalid expiresAt fields.`);
+      }
+  
+      // Only delete those with valid expiresAt <= now
+      const result = await Hotel.deleteMany({
+        expiresAt: { $exists: true, $lte: currentTime }
+      });
+  
+      console.log(`✅ Cleaned up ${result.deletedCount} expired hotels`);
     } catch (err) {
-        console.error("Error cleaning up expired hotels:", err);
+      console.error("❌ Error cleaning up expired hotels:", err);
     }
-};
+  };
+  
