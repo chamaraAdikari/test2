@@ -19,10 +19,10 @@ const connect = async () => {
         console.log("Connected to MongoDB.")
 
         // Set up cron job to run every day at midnight
-        cron.schedule('0 0 * * *', async () => {
-            console.log('Running daily cleanup of expired hotels...');
-            await cleanupExpiredHotels();
-        });
+        // cron.schedule('0 0 * * *', async () => {
+        //     console.log('Running daily cleanup of expired hotels...');
+        //     await cleanupExpiredHotels();
+        // });
 
     } catch (error) {
         throw error
