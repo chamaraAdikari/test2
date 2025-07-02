@@ -13,34 +13,7 @@ const FeaturedProperties = () => {
 
     return (
         <div className="fp">
-            {data && data.length > 0 ? (
-                <>
-                    {data.map((item) => (
-                        <div className="fpItem" key={item._id}>
-                            <img 
-                                src={item.photos?.[0] || "https://via.placeholder.com/150"} 
-                                alt={item.name} 
-                                className="fpImg" 
-                            />
-                            <Link to={`/hotels/${item._id}`} className="fpName">
-                                {item.name}
-                            </Link>
-                            <span className="fpCity">{item.city}</span>
-                            <span className="fpPrice">
-                                Starting from {formatPrice(item.cheaperstPrice || item.cheapestPrice || 0)}
-                            </span>
-                            {item.rating && (
-                                <div className="fpRating">
-                                    <button>{item.rating}</button>
-                                    <span>Excellent</span>
-                                </div>
-                            )}
-                        </div>
-                    ))}
-                </>
-            ) : (
-                <div>No featured properties available</div>
-            )}
+            
         </div>
     );
 };
