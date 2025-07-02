@@ -111,11 +111,7 @@ const Hotel = () => {
             </div>
 
             <div className="hotelImages">
-              {data.photos?.map((photo, i) => (
-                <div className="hotelImageWrapper" key={i}>
-                  <img onClick={() => handleOpen(i)} src={photo} alt="" className="hotelImg" />
-                </div>
-              ))}
+              
             </div>
             <div className="hotelDetails">
               <div className="hotelDetailsTexts">
