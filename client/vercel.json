@@ -1,10 +1,5 @@
-
 {
-    "rewrites": [
-      {
-        "source": "/api/:path*",
-        "destination": "http://51.21.190.71:5000/api/:path*"
-      }
-    ]
-  }
-  
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
